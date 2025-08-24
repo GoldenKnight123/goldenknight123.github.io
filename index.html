@@ -79,7 +79,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/snake_ai.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -246,16 +246,11 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe src="timeless_trivia/timeless_trivia.html" width="800" height="600" style="border:none;"></iframe>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <!-- Download game button-->
-                                    <div class="text-center mt-4">
-                                        <a class="btn btn-xl btn-outline-dark" href="https://startbootstrap.com/theme/freelancer/">
-                                            <i class="fas fa-download me-2"></i>
-                                            Free Download!
-                                        </a>
+                                    <div class="text-center mb-5">
+                                        <iframe src="timeless_trivia/timeless_trivia.html" width="900" height="506.25" style="border:gray; max-width: 100%;"></iframe>
                                     </div>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">This was a project I made in High School for an assignment. We were tasked with creating a quiz game, but I wanted to make things more interesting and unique. So I combined a platformer game and a quiz game together to make this - Timeless Trivia. The concept is simple, you defeat the enemies by stopping time to read the trivia questions attached to them, then you can shoot a multi-choice answer at them. If you are correct, they are defeated, if not, they start chasing you. This is a webassembly version of the original game, so the audio is a bit distorted and low quality and the questions are pre-determined rather than taken from an api. There is a repository <a href="https://github.com/GoldenKnight123/quizplatformerprogram" target="_blank">here</a>.</p>
                                     <br />
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -278,17 +273,22 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Snake AI</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                    <!-- Portfolio Modal - Video-->
+                                    <div class="text-center mb-5">
+                                        <video class="img-fluid rounded" controls style="max-width: 100%; height: auto;">
+                                            <source src="assets/vid/snake_demo.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">I've always been interested in AI, especially reinforcement learning and how it can be applied in video games. For this project I created a simple environment in pygame and used openai gym and keras to build a snake AI trained through reinforcement learning. You can see a example of how the final model performs. You can also clone the <a href="https://github.com/GoldenKnight123/Snake-RL-AI" target="_blank">repo</a> and run load_model.py with the correct dependencies on your own device.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
