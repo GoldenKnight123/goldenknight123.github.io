@@ -319,11 +319,18 @@
                                     </div>
                                     <!-- Portfolio Modal - Image-->
                                     <div class="text-center mb-5">
-                                        <iframe src="dots_ai/index.html" width="720" height="960" style="border:none; max-width: 100%; will-change: auto;" allow="accelerometer; gyroscope"></iframe>
+                                        <iframe src="dots_ai/index.html" 
+                                                width="720" height="960"
+                                                style="border:none; max-width:100%; display:block;"
+                                                allow="accelerometer; gyroscope; fullscreen; autoplay; gamepad"
+                                                allowfullscreen
+                                                loading="eager">
+                                        </iframe>
+
                                     </div>
 
                                     <br>
-                                    <a href="dots_ai/index.html" target="_blank" class="btn btn-secondary mt-3">
+                                    <a href="dots_ai/index.html" target="_blank" class="btn btn-secondary mt-3 mb-5">
                                         <i class="fas fa-external-link-alt"></i> Open Full Screen
                                     </a>
                                     
@@ -353,7 +360,7 @@
                                     </div>
                                     
                                     <!-- Portfolio Modal - Text-->
-                                    <p><strong>RUNS SLOW IN BROWSER.</strong></p>
+                                    <p><strong>OPEN IN FULLSCREEN IF EMBED IS SLOW</strong></p>
                                     <p class="mb-4">A genetic algorithm program where you can build your own obstacle course and have intelligent DOTS navigate and finds the best route through it over time. You can find the repository for this project <a href="https://github.com/GoldenKnight123/DOTS_AI" target="_blank">here</a>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
