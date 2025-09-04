@@ -15,10 +15,10 @@
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+          </li>
         </ul>
-      </div>
-      <div class="spacer">
-        <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
       </div>
     </nav>
     <nav id="hamburger-nav">
@@ -33,6 +33,14 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <button
+              id="theme-toggle-mobile"
+              class="theme-toggle-btn mobile-theme-btn"
+            >
+              🌙
+            </button>
+          </li>
         </div>
       </div>
     </nav>
@@ -45,7 +53,14 @@
         />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">What's up <img src="./assets/img/portfolio/wave.png" alt="Wave" class="wave-icon">, I'm</p>
+        <p class="section__text__p1">
+          What's up
+          <img
+            src="./assets/img/portfolio/wave.png"
+            alt="Wave"
+            class="wave-icon theme-icon"
+          />, I'm
+        </p>
         <h1 class="section__text__h1">Hanxiang Wang</h1>
         <p class="section__text__p2">Software Engineer</p>
         <div class="btn-container">
@@ -141,13 +156,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/GoldenKnight123/quizplatformerprogram'"
+                onclick="window.open('https://github.com/GoldenKnight123/quizplatformerprogram', '_blank')"
               >
                 GitHub
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='./timeless_trivia/timeless_trivia.html'"
+                onclick="window.open('./timeless_trivia/timeless_trivia.html', '_blank')"
               >
                 Web Demo
               </button>
@@ -165,13 +180,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/GoldenKnight123/DOTS_AI'"
+                onclick="window.open('https://github.com/GoldenKnight123/DOTS_AI', '_blank')"
               >
                 GitHub
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='./dots_ai/index.html'"
+                onclick="window.open('./dots_ai/index.html', '_blank')"
               >
                 Web Demo
               </button>
@@ -189,7 +204,7 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/GoldenKnight123/Snake-RL-AI'"
+                onclick="window.open('https://github.com/GoldenKnight123/Snake-RL-AI', '_blank')"
               >
                 GitHub
               </button>
@@ -225,7 +240,9 @@
             class="icon contact-icon"
           />
           <p>
-            <a href="https://www.linkedin.com/in/hanxiang-wang-6bb447214/"
+            <a
+              href="https://www.linkedin.com/in/hanxiang-wang-6bb447214/"
+              target="_blank"
               >LinkedIn</a
             >
           </p>
