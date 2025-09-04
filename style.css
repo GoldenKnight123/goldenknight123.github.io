@@ -151,7 +151,8 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 auto; /* Change from '0 10rem' to '0 auto' */
+  max-width: 1200px; /* Add max-width to contain content */
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -259,4 +260,74 @@ section {
 
 .btn-container {
   gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Add this to allow wrapping */
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 2.5rem;
+  right: -5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 30%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
 }
