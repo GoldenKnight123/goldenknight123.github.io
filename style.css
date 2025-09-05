@@ -548,6 +548,7 @@ section {
 
 #skills {
   position: relative; /* Add this line */
+  overflow: visible;
 }
 
 .skills-container {
@@ -581,6 +582,8 @@ section {
   min-width: 120px; /* Increased from 100px */
   flex-shrink: 0;
   text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .skill p {
@@ -604,7 +607,7 @@ section {
   }
 }
 
-.skills-track:hover {
+.skills-track {
   animation-play-state: paused;
 }
 
@@ -612,6 +615,127 @@ section {
 .details-container .skills-container {
   width: 100%;
   max-width: none;
+}
+
+.skill-star {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 1.2rem;
+  z-index: 10;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Large skill popup styles */
+.skill-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.skill-popup {
+  position: absolute;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  width: 320px;
+  border: rgb(100, 100, 100) 0.1rem solid;
+  pointer-events: auto;
+}
+
+.skill-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.skill-popup::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #2a2a2a;
+}
+
+.popup-content {
+  padding: 24px;
+}
+
+.popup-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+.skill-level {
+  margin: 0 0 16px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  opacity: 0.8;
+}
+
+.skill-description {
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(200, 200, 200);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #e0e0e0;
+  color: #1a1a1a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Light mode popup styles */
+body.light-mode .skill-popup {
+  background: white;
+  color: #333;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: rgb(163, 163, 163) 0.1rem solid;
+}
+
+body.light-mode .skill-popup::before {
+  border-bottom-color: white;
+}
+
+body.light-mode .popup-content h3 {
+  color: #333;
+}
+
+body.light-mode .skill-level {
+  color: #333;
+}
+
+body.light-mode .skill-description {
+  color: rgb(85, 85, 85);
+}
+
+body.light-mode .tag {
+  background: #333;
+  color: white;
 }
 
 /* PROJECTS SECTION */
