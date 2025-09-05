@@ -120,6 +120,11 @@ body.light-mode .details-container {
   border-color: rgb(163, 163, 163);
 }
 
+body.light-mode .skills-container {
+  background: white;
+  border-color: rgb(163, 163, 163);
+}
+
 body.light-mode .color-container {
   background: rgb(250, 250, 250);
   border-color: rgb(163, 163, 163);
@@ -537,6 +542,76 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+/* SKILLS SECTION */
+
+#skills {
+  position: relative; /* Add this line */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: #2a2a2a; /* Changed from white */
+  border-radius: 2rem;
+  border: rgb(100, 100, 100) 0.1rem solid; /* Changed border color */
+  border-color: rgb(100, 100, 100); /* Changed border color */
+  padding: 2rem 0;
+  margin: 0 2rem;
+}
+
+.skills-track {
+  display: flex;
+  gap: 4rem; /* Increased from 2rem */
+  animation: slideLeft 10s linear infinite; /* Increased duration for smoother effect */
+  white-space: nowrap;
+  will-change: transform; /* Optimize for animations */
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px; /* Increased from 100px */
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.skill p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skill-icon {
+  width: 3.5rem; /* Increased from 3rem */
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.8%); /* More precise calculation */
+  }
+}
+
+.skills-track:hover {
+  animation-play-state: paused;
+}
+
+/* Ensure smooth loop by making the container width consistent */
+.details-container .skills-container {
+  width: 100%;
+  max-width: none;
 }
 
 /* PROJECTS SECTION */
