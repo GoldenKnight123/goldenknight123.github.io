@@ -302,3 +302,113 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Demo data with instructions and controls
+const demoData = {
+  "Timeless Trivia": {
+    url: "./timeless_trivia/timeless_trivia.html",
+    controls: [
+      "Use ARROW KEYS to move your character",
+      "Press SPACEBAR to jump",
+      "Use Q, W, E, and R to shoot answer bullets A, B, C, and D",
+      "Hold LCtrl to stop time and view the enemies questions",
+      "Shoot the right answer at the enemies to defeat them",
+    ],
+  },
+  "DOTS AI": {
+    url: "./dots_ai/index.html",
+    controls: [
+      "Keyboard Controls:",
+      "1: Spawn an obstacle (red), will kill dots when they touch them.",
+      "2: Spawn a checkpoint (blue), will act as guidance for which direction the dot should move in if they are struggling to make progress.",
+      "WASD: Control the width and height of the obstacle or checkpoint being spawned.",
+      "LCtrl: Halves the speed of width or height increase. (For fine adjustments.)",
+      "7: Start learning.",
+      "8: Stop learning. Will wipe all memory and current AI.",
+      "9: Pause learning.",
+      "0: Toggle view mode. Only the best dot of the previous generation will be displayed (blue).",
+      "- & +: Change the speed of the program down and up respectively.",
+      "[ & ]: Change the Mutation Rate of the new generations down and up respectively.",
+      "; & ': Change the max step count (how many movement a dot can have before they die) down and up respectively.",
+    ],
+  },
+};
+
+let currentDemoUrl = "";
+
+function openDemoModal(title, url) {
+  const modal = document.getElementById("demoModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const instructionsDiv = document.getElementById("demoInstructions");
+  const demoFrame = document.getElementById("demoFrame");
+  const controlsSection = document.getElementById("controlsSection");
+
+  modalTitle.textContent = title;
+  currentDemoUrl = url;
+
+  // Show instructions, hide iframe
+  instructionsDiv.style.display = "block";
+  demoFrame.style.display = "none";
+  demoFrame.src = "";
+
+  // Populate controls
+  const demo = demoData[title];
+  if (demo) {
+    controlsSection.innerHTML = demo.controls
+      .map(
+        (control) =>
+          `<div class="control-item">
+        <span class="control-bullet">•</span>
+        <span class="control-text">${control}</span>
+      </div>`
+      )
+      .join("");
+  }
+
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function launchDemo() {
+  const instructionsDiv = document.getElementById("demoInstructions");
+  const demoFrame = document.getElementById("demoFrame");
+
+  if (currentDemoUrl && currentDemoUrl !== "#") {
+    // Hide instructions, show iframe
+    instructionsDiv.style.display = "none";
+    demoFrame.style.display = "block";
+    demoFrame.src = currentDemoUrl;
+  } else {
+    // If no demo available, show alert
+    alert(
+      "No web demo available for this project. Please check the GitHub repository for the source code."
+    );
+  }
+}
+
+function closeDemoModal() {
+  const modal = document.getElementById("demoModal");
+  const demoFrame = document.getElementById("demoFrame");
+  const instructionsDiv = document.getElementById("demoInstructions");
+
+  modal.style.display = "none";
+  demoFrame.src = "";
+  demoFrame.style.display = "none";
+  instructionsDiv.style.display = "block";
+  document.body.style.overflow = "auto";
+  currentDemoUrl = "";
+}
+
+// Close modal when clicking outside the modal content
+document.getElementById("demoModal").addEventListener("click", function (e) {
+  if (e.target === this) {
+    closeDemoModal();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeDemoModal();
+  }
+});

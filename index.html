@@ -401,7 +401,7 @@
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="window.open('./timeless_trivia/timeless_trivia.html', '_blank')"
+                onclick="openDemoModal('Timeless Trivia', './timeless_trivia/timeless_trivia.html')"
               >
                 Web Demo
               </button>
@@ -425,7 +425,7 @@
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="window.open('./dots_ai/index.html', '_blank')"
+                onclick="openDemoModal('DOTS AI', './dots_ai/index.html')"
               >
                 Web Demo
               </button>
@@ -517,6 +517,55 @@
         </div>
       </div>
     </div>
+
+    <div class="modal-overlay" id="demoModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 id="modalTitle">Project Demo</h3>
+          <button class="modal-close" onclick="closeDemoModal()">
+            &times;
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="demo-instructions" id="demoInstructions">
+            <div class="instructions-content">
+              <h4>How to Play</h4>
+              <div class="controls-section" id="controlsSection">
+                <!-- Controls will be populated by JavaScript -->
+              </div>
+              <div class="launch-demo-container">
+                <button
+                  class="btn btn-color-1 launch-demo-btn"
+                  onclick="launchDemo()"
+                >
+                  Launch Demo
+                </button>
+              </div>
+            </div>
+            <div class="desktop-only-message">
+              <div class="icon">💻</div>
+              <br />
+              <h4>Demo Available on Desktop Only</h4>
+              <p>
+                This interactive demo requires a larger screen, keyboard and
+                mouse for the best experience.
+              </p>
+              <p>
+                Please visit this site on a desktop device or increase your
+                screen size to try the demo.
+              </p>
+            </div>
+          </div>
+          <iframe
+            id="demoFrame"
+            src=""
+            frameborder="0"
+            style="display: none"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
