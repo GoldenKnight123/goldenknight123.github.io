@@ -144,7 +144,6 @@ function showSkillPopup(skillName, skillElement) {
 
   // Update popup content
   document.getElementById("popupTitle").textContent = data.title;
-  document.getElementById("popupLevel").textContent = data.level;
   document.getElementById("popupDescription").textContent = data.description;
 
   // Update tags
